@@ -5,12 +5,15 @@ export const useDesktopStore = defineStore('desktop', () => {
   // {id:ID号,name:软件名称,iconSrc:图标地址,command:启动命令}
   const apps = ref([])
 
-  function initApps() {
-    apps.value = [
-      { id: 1, name: '软件1', iconSrc: './temp/1.png', command: 'command1' },
-      { id: 2, name: '软件2', iconSrc: './temp/2.png', command: 'command2' }
-    ]
+  // 请求软件列表信息 initApps
+  async function initApps() {
+    apps.value = await window.api.initApps()
   }
 
-  return { apps, initApps }
+  // 处理软件打开请求 openApps
+  async function openApp(command) {
+    window.api.openApp(command)
+  }
+
+  return { apps, initApps, openApp }
 })
