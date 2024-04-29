@@ -1,9 +1,17 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const props = defineProps({
+  app: Object
+})
+const srcValue = ref(props.app.iconSrc)
+const nameValue = ref(props.app.name)
+</script>
 
 <template>
   <div class="desktop-icon">
-    <img src="1.png" alt="Folder" />
-    <span>文件夹</span>
+    <img :src="srcValue" :alt="nameValue" />
+    <span>{{ props.app.name }}</span>
   </div>
 </template>
 
