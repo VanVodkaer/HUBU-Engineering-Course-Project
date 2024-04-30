@@ -15,6 +15,11 @@ DesktopStore.initApps()
 <style scoped>
 .desktop-main {
   background-color: #7cffeb;
+  background-image: url(@renderer/assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   width: 100vw;
   height: 95vh;
 }
