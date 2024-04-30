@@ -1,5 +1,15 @@
+<script setup>
+import { computed } from 'vue'
+import { useDesktopStore } from '../../store/desktop'
+const DesktopStore = useDesktopStore()
+
+const displayname = computed(() => {
+  return DesktopStore.getSelectedAppName() || '任务栏'
+})
+</script>
+
 <template>
-  <div class="taskbar">任务栏</div>
+  <div class="taskbar">{{ displayname }}</div>
 </template>
 
 <style scoped>

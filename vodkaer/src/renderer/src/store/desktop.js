@@ -28,5 +28,14 @@ export const useDesktopStore = defineStore('desktop', () => {
     selected.value = undefined
   }
 
-  return { apps, initApps, openApp, selected, selectOne, clearAllSelected }
+  function getSelectedAppName() {
+    const item = apps.value.find((item) => item.id === selected.value)
+    if (item === undefined) {
+      return undefined
+    } else {
+      return item.name
+    }
+  }
+
+  return { apps, initApps, openApp, selected, selectOne, clearAllSelected, getSelectedAppName }
 })
