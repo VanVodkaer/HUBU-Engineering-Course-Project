@@ -15,5 +15,18 @@ export const useDesktopStore = defineStore('desktop', () => {
     window.api.openApp(command)
   }
 
-  return { apps, initApps, openApp }
+  // 选中的列表虚线框 无则加选 有则取消选择
+  const selected = ref(undefined)
+  function selectOne(id) {
+    if (selected.value !== id) {
+      selected.value = id
+    } else {
+      selected.value = undefined
+    }
+  }
+  function clearAllSelected() {
+    selected.value = undefined
+  }
+
+  return { apps, initApps, openApp, selected, selectOne, clearAllSelected }
 })

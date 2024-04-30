@@ -12,17 +12,24 @@ const commandValue = ref(props.app.command)
 
 const element = ref(null)
 function handleClick() {
-  element.value.classList.toggle('selected')
+  DesktopStore.selectOne(props.app.id)
 }
 
 function handleDblClick() {
-  element.value.classList.remove('selected')
+  // element.value.classList.remove('selected')
+  DesktopStore.clearAllSelected()
   DesktopStore.openApp(commandValue.value)
 }
 </script>
 
 <template>
-  <div ref="element" class="desktop-icon" @click="handleClick()" @dblclick="handleDblClick()">
+  <div
+    ref="element"
+    class="desktop-icon"
+    :class="{ selected: props.app.id === DesktopStore.selected }"
+    @click="handleClick()"
+    @dblclick="handleDblClick()"
+  >
     <img :src="srcValue" :alt="nameValue" />
     <span>{{ props.app.name }}</span>
   </div>
