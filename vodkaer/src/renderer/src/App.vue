@@ -4,6 +4,6 @@ import DesktopMain from '@renderer/components/Desktop/DesktopMain.vue'
 </script>
 
 <template>
-  <TaskbarMain></TaskbarMain>
   <DesktopMain></DesktopMain>
+  <TaskbarMain></TaskbarMain>
 </template>
