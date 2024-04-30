@@ -1,12 +1,16 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useDesktopStore } from '@renderer/store/desktop'
 const DesktopStore = useDesktopStore()
 
 const props = defineProps({
   app: Object
 })
-const srcValue = ref(props.app.iconSrc)
+const srcValue = computed(() => {
+  const basePath = new URL('../../assets/icons/', import.meta.url).href
+  return `${basePath}` + '/' + `${props.app.iconSrc}`
+})
+//  ref(props.app.iconSrc)
 const nameValue = ref(props.app.name)
 const commandValue = ref(props.app.command)
 
@@ -53,6 +57,9 @@ function handleDblClick() {
   text-align: center;
   color: white;
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .selected {
