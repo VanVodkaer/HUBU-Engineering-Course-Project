@@ -1,5 +1,5 @@
 {
-  "name": "electron-app",
+  "name": "hubu-engineering-course-project",
   "version": "1.0.0",
   "description": "An Electron application with Vue",
   "main": "./out/main/index.js",
@@ -35,5 +35,13 @@
     "prettier": "^3.2.4",
     "vite": "^5.0.12",
     "vue": "^3.4.15"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanVodkaer/HUBU-Engineering-Course-Project.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VanVodkaer/HUBU-Engineering-Course-Project/issues"
   }
 }

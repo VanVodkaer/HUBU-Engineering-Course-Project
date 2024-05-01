@@ -7,10 +7,11 @@ const props = defineProps({
   app: Object
 })
 const srcValue = computed(() => {
-  const basePath = new URL('../../assets/icons/', import.meta.url).href
-  return `${basePath}` + '/' + `${props.app.iconSrc}`
+  // const basePath = new URL('../../assets/icons/', import.meta.url).href
+  // return `${basePath}` + '/' + `${props.app.iconSrc}`
+  return '/icons/' + props.app.iconSrc
 })
-//  ref(props.app.iconSrc)
+
 const nameValue = ref(props.app.name)
 const commandValue = ref(props.app.command)
 

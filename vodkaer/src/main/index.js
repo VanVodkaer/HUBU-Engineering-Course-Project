@@ -3,7 +3,8 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
-import { openNewCmdWithFile } from './child.js'
+import { openNewCmdWithFile } from './utils/child.js'
+import { getAppsInfo } from './utils/apps.js'
 
 function createWindow() {
   // 创建一个浏览器窗口
@@ -54,6 +55,10 @@ app.whenReady().then(() => {
   // ipcMain.on('ping', () => console.log('pong'))
   ipcMain.on('openApp', async (event, data) => {
     openNewCmdWithFile(data)
+  })
+
+  ipcMain.handle('initApps', () => {
+    return getAppsInfo()
   })
 
   createWindow()
