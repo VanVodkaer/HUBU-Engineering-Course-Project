@@ -3,15 +3,13 @@ import { electronAPI } from '@electron-toolkit/preload'
 
 // 自定义 API 供渲染进程使用
 const api = {
-  // 处理软件初始化请求
-  async initApps() {
-    return await ipcRenderer.invoke('initApps')
-  },
-
   // 处理软件打开请求
   openApp(command) {
     // 向主进程发送 'openApp' 消息
     ipcRenderer.send('openApp', command)
+  },
+  async getResUrl() {
+    return await ipcRenderer.invoke('getResUrl')
   }
 }
 
