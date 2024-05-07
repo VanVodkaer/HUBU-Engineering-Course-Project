@@ -7,6 +7,9 @@ const api = {
   openApp(command) {
     // 向主进程发送 'openApp' 消息
     ipcRenderer.send('openApp', command)
+  },
+  async getResUrl() {
+    return await ipcRenderer.invoke('getResUrl')
   }
 }
 

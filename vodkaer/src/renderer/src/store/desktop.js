@@ -4,15 +4,16 @@ import { ref } from 'vue'
 export const useDesktopStore = defineStore('desktop', () => {
   // {id:ID号,name:软件名称,iconSrc:图标地址,command:启动命令}
   const apps = ref([])
+  const resUrl = ref('')
 
   // 请求软件列表信息 initApps
 
-  function initApps() {
+  async function initApps() {
     apps.value = [
       {
         id: 1,
         name: '计算器',
-        iconSrc: `CalculatorProgram.png`,
+        iconSrc: 'CalculatorProgram.png',
         command: 'helloworld.exe'
       },
       {
@@ -40,6 +41,7 @@ export const useDesktopStore = defineStore('desktop', () => {
         command: '启动命令2'
       }
     ]
+    resUrl.value = await window.api.getResUrl()
   }
 
   // 处理软件打开请求 openApps
@@ -71,6 +73,7 @@ export const useDesktopStore = defineStore('desktop', () => {
 
   return {
     apps,
+    resUrl,
     initApps,
     openApp,
     selected,
