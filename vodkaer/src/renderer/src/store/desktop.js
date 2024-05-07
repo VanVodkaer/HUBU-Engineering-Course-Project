@@ -14,19 +14,19 @@ export const useDesktopStore = defineStore('desktop', () => {
         id: 1,
         name: '计算器',
         iconSrc: 'CalculatorProgram.png',
-        command: 'helloworld.exe'
+        command: '启动命令1'
       },
       {
         id: 2,
         name: '温度转换',
         iconSrc: 'TemperatureConverter.png',
-        command: '启动命令2'
+        command: 'tempature.exe'
       },
       {
         id: 3,
         name: '质数检测',
         iconSrc: 'PrimeNumberChecker.png',
-        command: '启动命令2'
+        command: 'JudgingPrimeNumber.exe'
       },
       {
         id: 4,
@@ -38,7 +38,7 @@ export const useDesktopStore = defineStore('desktop', () => {
         id: 5,
         name: '猜数游戏',
         iconSrc: 'GuessTheNumberGame.png',
-        command: '启动命令2'
+        command: 'numberguess.exe'
       }
     ]
     resUrl.value = await window.api.getResUrl()

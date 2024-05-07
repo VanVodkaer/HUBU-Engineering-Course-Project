@@ -1,9 +1,9 @@
 {
   "name": "hubu-engineering-course-project",
   "version": "1.0.0",
-  "description": "An Electron application with Vue",
+  "description": "基于Electron+Vue的桌面模拟软件",
   "main": "./out/main/index.js",
-  "author": "example.com",
+  "author": "VanVodkaer",
   "homepage": "https://electron-vite.org",
   "scripts": {
     "format": "prettier --write .",

@@ -1,30 +1,30 @@
-#include<iostream>
-#include<ctime>
-#include<stdlib.h>
-#include<time.h>
+#include <iostream>
+#include <ctime>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
 int main()
 {
-	//µçÄÔËæ»úÉú³ÉÒ»¸ö1~100µÄÊı£¬¼ÇÎªdaan
-	srand(time(NULL)) ;
-	int daan=rand()%100+1;
-	//ÓÃ»§ÊäÈëÊı¼ÇÎªhuida
-	int huida=0;
-	while(1) 
+	// ç”µè„‘éšæœºç”Ÿæˆä¸€ä¸ª1~100çš„æ•°ï¼Œè®°ä¸ºdaan
+	srand(time(NULL));
+	int daan = rand() % 100 + 1;
+	// ç”¨æˆ·è¾“å…¥æ•°è®°ä¸ºhuida
+	int huida = 0;
+	while (1)
 	{
-		cout<<"ÇëÔÚ1~100Ö®¼ä²ÂÊı×Ö:"<<endl;
-		cin>>huida;
-		if(huida>daan)
+		cout << "è¯·åœ¨1~100ä¹‹é—´çŒœæ•°å­—:" << endl;
+		cin >> huida;
+		if (huida > daan)
 		{
-			cout<<"´óÁË ÔÙ²ÂÒ»´Î°É£¡"<<endl; 
+			cout << "å¤§äº† å†çŒœä¸€æ¬¡å§ï¼" << endl;
 		}
-		else if(huida<daan)
+		else if (huida < daan)
 		{
-			cout<<"Ğ¡ÁË ÔÙ²ÂÒ»´Î°É£¡"<<endl;
+			cout << "å°äº† å†çŒœä¸€æ¬¡å§ï¼" << endl;
 		}
 		else
 		{
-			cout<<"»Ø´ğÕıÈ· Ì«°ôÀ²£¡"<<endl; 
+			cout << "å›ç­”æ­£ç¡® å¤ªæ£’å•¦ï¼" << endl;
 			break;
 		}
 	}
