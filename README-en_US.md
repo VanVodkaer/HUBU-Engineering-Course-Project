@@ -42,7 +42,3 @@ This project aims to simulate a desktop software by creating a user-friendly int
 ## Development and Contributions
 
 This project is open source, and developers and technology enthusiasts are welcome to participate in the development and improvement of the project. You can submit code or feature enhancements through issues or pull requests on GitHub.
-
----
-
-I hope this introduction helps you understand and use the project. If there are any specific needs or feature introductions to be added, let me know anytime!
