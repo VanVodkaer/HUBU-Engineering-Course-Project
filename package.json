@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "init": "cd ./vodkaer && npm i",
+    "make": "make.bat",
     "dev": "cd ./vodkaer && npm run dev",
     "build": "cd ./vodkaer && npm run build:unpack"
   },

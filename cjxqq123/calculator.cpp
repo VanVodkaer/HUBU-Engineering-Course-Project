@@ -1,27 +1,31 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main() {
+int main()
+{
 	int a, b = 0;
 	char c;
-	cout << "ÇëÊäÈëÄãÒª¼ÆËãµÄÊý×Ö" << endl;
+	cout << "è¯·è¾“å…¥ä½ è¦è®¡ç®—çš„æ•°å­—" << endl;
 	cin >> a >> b;
-	cout << "ÇëÊäÈëÔËËã·û" << endl;
+	cout << "è¯·è¾“å…¥è¿ç®—ç¬¦" << endl;
 	cin >> c;
 	int d;
-	if (c == '+') {
+	if (c == '+')
+	{
 		d = a + b;
 		cout << "a+b=" << d << endl;
 	}
-	if (c == '-') {
-		d = a-b;
+	if (c == '-')
+	{
+		d = a - b;
 		cout << "a-b=" << d << endl;
 	}
-	if (c == '*') {
+	if (c == '*')
+	{
 		d = a * b;
 		cout << "a*b=" << d << endl;
-		
 	}
-	if (c == '/') {
+	if (c == '/')
+	{
 		d = a / b;
 		cout << "a/b=" << d << endl;
 	}
