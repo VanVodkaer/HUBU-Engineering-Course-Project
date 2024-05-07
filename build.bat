@@ -1,8 +1,11 @@
-@REM 创建临时文件夹
-mkdir .\temp\bin
+del /Q .\vodkaer\resources\bin
 
-@REM 单条构建
 cd .\Nizday88
 g++ JudgingPrimeNumber.cpp -o JudgingPrimeNumber.exe
-move JudgingPrimeNumber.exe ..\temp
+move JudgingPrimeNumber.exe ..\vodkaer\resources\bin
+cd ..
+
+cd .\temperature
+g++ tempature.cpp -o tempature.exe
+move tempature.exe ..\vodkaer\resources\bin
 cd ..
