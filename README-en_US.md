@@ -35,9 +35,10 @@ This project aims to simulate a desktop software by creating a user-friendly int
 
 ## How to Use
 
-1. **Install Dependencies**: After cloning the repository, use the `npm install` command to install the necessary dependencies.
-2. **Run the Application**: Start the application with the `npm start` command. The application will create a simulated desktop environment on your local computer, where you can access and launch all the mini-applications.
-3. **Access Mini-applications**: On the simulated desktop interface, click the corresponding icons to launch and use the various mini-applications.
+1. **Install Dependencies**: After cloning the repository, use the `npm run init` command to install necessary dependencies.
+2. **Run the Application**: Use the `npm run dev` command to start the application. The application will create a simulated desktop environment on your local computer, through which you can access and launch all the mini-apps.
+3. **Access Mini-Apps**: On the simulated desktop interface, click the corresponding icons to start and use the various mini-apps.
+4. **Build Desktop Application**: Use `npm run build` to build the desktop application.
 
 ## Development and Contributions
 
