@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 	int x,flag=0; 
-	cout<<"ÇëÊäÈëÒ»¸öÕýÕûÊý£º";
+	cout<<"è¯·è¾“å…¥ä¸€ä¸ªæ­£æ•´æ•°ï¼š";
 	cin>>x;
 	if(x<=0)
 	{
@@ -17,13 +17,13 @@ int main()
 		if(x%i==0)
 		{
 			flag=1; 
-			cout<<endl<<x<<"²»ÊÇÒ»¸öÖÊÊý"<<endl;
+			cout<<endl<<x<<"ä¸æ˜¯ä¸€ä¸ªè´¨æ•°"<<endl;
 			break;
 		}
 	}
 	if(flag==0)
 	{
-		cout<<endl<<x<<"ÊÇÒ»¸öÖÊÊý"<<endl; 
+		cout<<endl<<x<<"æ˜¯ä¸€ä¸ªè´¨æ•°"<<endl; 
 	}
 	return 0;
 } 
