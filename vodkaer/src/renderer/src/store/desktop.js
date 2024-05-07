@@ -38,7 +38,7 @@ export const useDesktopStore = defineStore('desktop', () => {
         id: 5,
         name: '猜数游戏',
         iconSrc: 'GuessTheNumberGame.png',
-        command: '启动命令2'
+        command: 'numberguess.exe'
       }
     ]
     resUrl.value = await window.api.getResUrl()
