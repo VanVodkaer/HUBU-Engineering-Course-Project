@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/BackButton.png</file>
+        <file>image/BackButtonSelected.png</file>
+        <file>image/BoardNode.png</file>
+        <file>image/Coin0001.png</file>
+        <file>image/Coin0002.png</file>
+        <file>image/Coin0003.png</file>
+        <file>image/Coin0004.png</file>
+        <file>image/Coin0005.png</file>
+        <file>image/Coin0006.png</file>
+        <file>image/Coin0007.png</file>
+        <file>image/Coin0008.png</file>
+        <file>image/LevelCompletedDialogBg.png</file>
+        <file>image/LevelIcon.png</file>
+        <file>image/MenuSceneBg.png</file>
+        <file>image/MenuSceneStartButton.png</file>
+        <file>image/OtherSceneBg.png</file>
+        <file>image/PlayLevelSceneBg.png</file>
+        <file>image/Title.png</file>
+        <file>audio/coinMusic.wav</file>
+        <file>audio/success.wav</file>
+        <file>audio/btn.wav</file>
+    </qresource>
+</RCC>
