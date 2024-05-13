@@ -1,20 +1,33 @@
-#include<iostream>
-int Fabonacci(int n);
-using namespace std;
-int main() {
-	int n;
-	cout << "ÇëÊäÈëÄãÒª¼ÆËãµÄÊý×Ön" << endl;
-	cin >> n;
-	int sum = Fabonacci(n);
-	cout << "¼ÆËãµÃµ½µÄì³²¨ÄÇÆõÊýÁÐµÄÖµÎª" << sum << endl;
-	system("pause");
-	return 0;
+#include <iostream>
+
+int fibonacci(int n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
-int Fabonacci(int n) {
-	if (n == 1 || n == 2) {
-		return 1;
-	}
-	if (n > 2) {
-		return (Fabonacci(n - 1) + Fabonacci(n - 2));
-	}
+
+int main() {
+    while (true) {
+        int n;
+        std::cout << "è¯·è¾“å…¥æ‚¨æƒ³è¦è®¡ç®—çš„æ•°å­—: ";
+        std::cin >> n;
+
+        if (n < 0) {
+            std::cout << "æ— æ•ˆè¾“å…¥ï¼Œè¯·è¾“å…¥ä¸€ä¸ªéžè´Ÿæ•°" << std::endl;
+            continue;
+        }
+
+        std::cout << "Fibonacciçš„è®¡ç®—ç»“æžœä¸º " << n << ": " << fibonacci(n) << std::endl;
+
+        char choice;
+        std::cout << "æ‚¨æ˜¯å¦æƒ³è¦ç»§ç»­å‘¢(y/n)? ";
+        std::cin >> choice;
+
+        if (choice != 'y') {
+            break;
+        }
+    }
+
+    return 0;
 }
