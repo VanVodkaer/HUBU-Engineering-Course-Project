@@ -13,8 +13,6 @@ function staticServer(port, dir) {
     fullPath = path.resolve('./resources/app.asar.unpacked', './resources', dir)
   }
 
-  console.log(fullPath)
-
   app.use('/', express.static(fullPath))
   app.listen(port, () => {})
 }
