@@ -14,7 +14,7 @@ export const useDesktopStore = defineStore('desktop', () => {
         id: 1,
         name: '计算器',
         iconSrc: 'CalculatorProgram.png',
-        command: '启动命令1'
+        command: 'calculator.exe'
       },
       {
         id: 2,
@@ -32,7 +32,7 @@ export const useDesktopStore = defineStore('desktop', () => {
         id: 4,
         name: '斐波那契数列生成',
         iconSrc: 'FibonacciSequenceGenerator.png',
-        command: '启动命令2'
+        command: 'Fabonacci.exe'
       },
       {
         id: 5,
