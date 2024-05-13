@@ -32,7 +32,7 @@ export const useDesktopStore = defineStore('desktop', () => {
         id: 4,
         name: '斐波那契数列生成',
         iconSrc: 'FibonacciSequenceGenerator.png',
-        command: 'Fabonacci.exe'
+        command: 'Fibonacci.exe'
       },
       {
         id: 5,
