@@ -20,3 +20,4 @@ g++ calculator.cpp -o calculator.exe
 move calculator.exe ..\vodkaer\resources\bin
 g++ Fibonacci.cpp -o Fibonacci.exe
 move Fibonacci.exe ..\vodkaer\resources\bin
+cd ..
