@@ -4,7 +4,7 @@
 
 1. 安装 Git 软件，设置个人 Git 信息  
 
-   > git config --global user.name "你的用户名"
+   > git config --global user.name "你的用户名"    
    > git config --global user.email 你的邮箱
 
 2. 拉取项目

@@ -3,7 +3,13 @@ import { join } from 'path'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
-import { initApps, openApp } from './desktop'
+import { openNewCmdWithFile } from './utils/child.js'
+
+import staticServer from './utils/server.js'
+
+// express 挂载web资源
+const webPort = 2333
+staticServer(webPort, './icons')
 
 function createWindow() {
   // 创建一个浏览器窗口
@@ -52,12 +58,10 @@ app.whenReady().then(() => {
 
   // IPC 测试
   // ipcMain.on('ping', () => console.log('pong'))
-  ipcMain.handle('initApps', async () => {
-    return initApps()
+  ipcMain.on('openApp', async (event, data) => {
+    openNewCmdWithFile(data)
   })
-  ipcMain.on('openApp', (event, data) => {
-    openApp(data)
-  })
+  ipcMain.handle('getResUrl', () => `http://localhost:${webPort}/`)
 
   createWindow()
 
