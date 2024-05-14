@@ -4,9 +4,9 @@ int main()
 {
     char a;
     double b, c;
-    cout << "请输入温度值和温度类型，类型为摄氏度请按C，为华氏度请按F(请注意大小写）若想终止输入请输入0 Q" << endl;
-    do{
-        cin >> b >> a;
+    cout << "请先输入温度类型再输入温度值，类型为摄氏度请按C，为华氏度请按F(请注意大小写）若想终止输入请输入0 Q" << endl;
+    while(true){
+        cin >> a >> b;
     if (a == 'C')
     {
         c = 32 + 1.8 * b;
@@ -23,6 +23,5 @@ int main()
         break；
     }
     }
-        while(a!='Q');
     return 0;
 }
