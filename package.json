@@ -1,0 +1,22 @@
+{
+  "name": "hubu-engineering-course-project",
+  "version": "1.0.0",
+  "description": "湖北大学(大一)工程实践课程小组合作开发测试项目",
+  "main": "index.js",
+  "scripts": {
+    "init": "cd ./vodkaer && npm i",
+    "make": "make.bat",
+    "dev": "cd ./vodkaer && npm run dev",
+    "build": "cd ./vodkaer && npm run build:unpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanVodkaer/HUBU-Engineering-Course-Project.git"
+  },
+  "author": "Van_Vodkaer byo Cassiel-256 cjxqq123 Duluyan Nizday88 xiao20050530",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/VanVodkaer/HUBU-Engineering-Course-Project/issues"
+  },
+  "homepage": "https://github.com/VanVodkaer/HUBU-Engineering-Course-Project#readme"
+}

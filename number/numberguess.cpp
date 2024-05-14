@@ -1,7 +1,7 @@
-#include<iostream>
-#include<ctime>
-#include<stdlib.h>
-#include<time.h>
+#include <iostream>
+#include <ctime>
+#include <stdlib.h>
+#include <time.h>
 using namespace std;
 int main()
 {

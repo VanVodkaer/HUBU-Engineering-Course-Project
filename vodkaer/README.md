@@ -1,34 +1,33 @@
-# electron-app
+# HUBU-Engineering-Course-Project
 
-An Electron application with Vue
+基于Electron+Vue的桌面模拟软件
 
-## Recommended IDE Setup
+## 推荐IDE设置
 
 - [VSCode](https://code.visualstudio.com/) + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) + [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-## Project Setup
+## 项目设置
 
-### Install
+### 安装依赖
 
 ```bash
 $ npm install
 ```
 
-### Development
+### 开发环境
 
 ```bash
 $ npm run dev
 ```
 
-### Build
+### 构建应用
 
 ```bash
-# For windows
+$ npm run build:unpack
+```
+
+或
+
+```bash
 $ npm run build:win
-
-# For macOS
-$ npm run build:mac
-
-# For Linux
-$ npm run build:linux
 ```
