@@ -2,37 +2,46 @@
 #include<ctime>
 #include<stdlib.h>
 #include<time.h>
+#include<limits>
 using namespace std;
-int main()
+void GuessNumber() 
 {
-	char again;
-	do
+    int daan = rand() % 100 + 1;  // 生成 1 到 100 之间的随机数作为daan
+    double huida;
+    while (true) 
 	{
-		//电脑随机生成一个1~100的数，记为daan
-		srand(time(NULL)) ;
-		int daan=rand()%100+1;
-		//用户输入数记为huida
-		int huida=0;
-	
-		while(1) 
+        	cout << "请在1~100之间猜数字: ";
+        	if (!(cin >> huida)) 
 		{
-			cout<<"请在1~100之间猜数字:"<<endl;
-			cin>>huida;
-			if(huida>daan)
-			{
-				cout<<"大了 再猜一次吧！"<<endl; 
-			}
-			else if(huida<daan)
-			{
-				cout<<"小了 再猜一次吧！"<<endl;
-			}
-			else
-			{
-				cout<<"回答正确 太棒啦！"<<endl; 
-				cout<<"还想再来一次吗？（y/n）:";
-				cin>>again;
-			}
-		}
-	}while(again=='y');
-	return 0;
+            		cin.clear();
+            		cin.ignore(numeric_limits<std::streamsize>::max(), '\n');
+            		cout << "输入无效，请重新输入一个整数。" << endl;
+           		 continue;
+       	 	}
+        	int guess=static_cast<int>(huida);
+        	if (guess == daan) 
+		{
+           	 	cout << "恭喜你，猜对了！" << endl;
+            		break;
+        	} 
+		else if (guess < daan)
+		{
+            		cout << "猜小了" << endl;
+        	} 
+		else 
+		{
+            		cout << "猜大了" << endl;
+        	}
+    	}
+}
+int main() 
+{
+    char again;
+    do 
+	{
+        	GuessNumber();
+        	cout << "是否再来一次(y/n)？ ";
+        	cin >> again;
+    	} while (again == 'y' || again == 'Y');
+    return 0;
 }
