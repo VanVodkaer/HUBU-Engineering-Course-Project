@@ -20,7 +20,7 @@ int main()
     else
     {
         cout << "按任意键跳出";
-        break；
+        break;
     }
     }
         while(a!='Q');
